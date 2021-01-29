@@ -20,7 +20,7 @@
 
 				<el-row type="flex" class="row-bg" justify="end">
 					
-					<el-col :span="2"  style="height: 3.75rem;display: flex;align-items: center;">
+					<el-col :span="2"  style="width:3.5rem;height: 3.75rem;display: flex;align-items: center;">
 						<div class="grid-content bg-purple">
 							
 							<span style="color: #606266;font-size: 0.875rem;"> <i class="el-icon-chat-dot-square el-icon--right"></i> 微聊</span>
@@ -28,7 +28,7 @@
 						</div>
 					</el-col>
 					
-					<el-col :span="2"  style="height: 3.75rem;display: flex;align-items: center;">
+					<el-col :span="2"  style="width:3.5rem;height: 3.75rem;display: flex;align-items: center;">
 						<div class="grid-content bg-purple">
 							
 							<span style="color: #606266;font-size: 0.875rem;"> <i class="el-icon-bell el-icon--right"></i> 消息</span>
@@ -36,21 +36,21 @@
 						</div>
 					</el-col>
 					
-					<el-col :span="3"  style="height: 3.75rem;display: flex;align-items: center;">
+					<el-col :span="3"  style="width:6.5rem;height: 3.75rem;display: flex;align-items: center;">
 						<div class="grid-content bg-purple">
 							
 							<span style="color: #606266;font-size: 0.875rem;"> <i class="el-icon-mobile-phone el-icon--right"></i> 下载手机端</span>
 							
 						</div>
 					</el-col>
-					<el-col :span="3" style="height: 3.75rem;display: flex;align-items: center;">
+					<el-col :span="3" style="width:6.5rem;height: 3.75rem;display: flex;align-items: center;">
 						<div class="grid-content">
 							
 							<span style="color: #606266;font-size: 0.875rem;"> <i class="el-icon-service el-icon--right"></i> 在线客服</span>
 							
 						</div>
 					</el-col>
-					<el-col :span="3" style="height: 3.75rem;display: flex;align-items: center;">
+					<el-col :span="3" style="width:7.5rem;height: 3.75rem;display: flex;align-items: center;">
 						<div class="grid-content">
 							<el-dropdown>
 							  <span class="el-dropdown-link">

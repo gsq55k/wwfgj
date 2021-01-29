@@ -5,9 +5,17 @@
 const routes = [
   {//首页
     path: '/',
-    name: 'Home',
-    component: () => import('@/views/Home')
-  }
+    name: 'Index',
+    component: () => import('@/views/Index'),
+	children:[
+		{
+		  path: 'home',//默认此页
+		  name: 'Home',
+		  component: () => import('@/views/Home')
+		}
+	]
+  },
+
 ]
 
 export default routes;

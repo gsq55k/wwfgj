@@ -6,8 +6,8 @@
 		      @open="handleOpen"
 		      @close="handleClose">
 			  
-		      <el-menu-item :index="menu.id" v-for="menu in menu_list">
-		        <i :class="menu.icon"></i> <span slot="title">{{menu.name}}</span>
+		      <el-menu-item :index="menu.id" v-for="menu in menu_list" @click="goto(menu.page)">
+					  <i :class="menu.icon"></i> <span slot="title">{{menu.name}}</span>
 		      </el-menu-item>
 
 		</el-menu>
@@ -23,7 +23,8 @@
 					{
 						id : '1',
 						icon : 'fa fa-home',
-						name : '工作台'
+						name : '工作台',
+						page : 'Home'
 					},
 					{
 						id : '2',
@@ -110,7 +111,12 @@
 			handleClose()
 			{
 				
+			},
+			goto(route_name)
+			{
+				this.$router.push({name:route_name});
 			}
+			
 			
 		}
 	}
