@@ -10,7 +10,18 @@
 
 				<div class="kouhao">
 
-					<span>终生免费使用房屋管理系统--全国房东都在用</span>
+					<div>
+						<span>终生免费使用房屋管理系统--全国房东都在用</span>
+						<el-breadcrumb separator-class="el-icon-arrow-right">
+						  <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+						  <el-breadcrumb-item>活动管理</el-breadcrumb-item>
+						  <el-breadcrumb-item>活动列表</el-breadcrumb-item>
+						  <el-breadcrumb-item>活动详情</el-breadcrumb-item>
+						</el-breadcrumb>
+					</div>
+
+
+
 
 				</div>
 
@@ -60,7 +71,8 @@
 							  </span>
 							  <el-dropdown-menu slot="dropdown">
 							    <el-dropdown-item><div @click="goto('Register')">注册</div></el-dropdown-item>
-							    <el-dropdown-item>菜单二</el-dropdown-item>
+							    <el-dropdown-item><div @click="goto('Login')">登录</div></el-dropdown-item>
+								<el-dropdown-item><div @click="goto('Account')">个人信息</div></el-dropdown-item>
 							  </el-dropdown-menu>
 							  
 							</el-dropdown>
@@ -116,8 +128,8 @@
 	.kouhao {
 		float: left;
 		height: 3.75rem;
-		line-height: 3.75rem;
 		color: lightgray;
 		padding-left: 0.9375rem;
+		margin-top: 1.25rem;
 	}
 </style>

@@ -31,9 +31,6 @@
 					
 				</el-row>
 				
-				
-				
-				
 			</el-col>
 			
 			<el-col :span="6">
