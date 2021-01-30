@@ -13,8 +13,13 @@ const routes = [
 		  name: 'Home',
 		  component: () => import('@/views/Home')
 		}
-	]
+	],
   },
+  {
+    path: 'register',//注册页面
+    name: 'Register',
+    component: () => import('@/views/Register')
+  }
 
 ]
 

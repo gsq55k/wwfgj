@@ -59,7 +59,7 @@
 								<i class="el-icon-arrow-down el-icon--right"></i>
 							  </span>
 							  <el-dropdown-menu slot="dropdown">
-							    <el-dropdown-item>菜单一</el-dropdown-item>
+							    <el-dropdown-item><div @click="goto('Register')">注册</div></el-dropdown-item>
 							    <el-dropdown-item>菜单二</el-dropdown-item>
 							  </el-dropdown-menu>
 							  
@@ -90,6 +90,10 @@
 		methods: {
 			handleSelect() {
 
+			},
+			goto(route_name)
+			{
+				this.$router.push({name:route_name});
 			}
 		}
 	}

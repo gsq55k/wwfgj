@@ -123,6 +123,9 @@
 </script>
 
 <style>
+.el-menu{
+	height: 100%;
+}
 .el-menu-item{
 	height: 2.1875rem;
 	line-height: 2.1875rem;
