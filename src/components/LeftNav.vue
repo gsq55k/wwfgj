@@ -4,9 +4,10 @@
 		      default-active="1"
 		      class="el-menu-vertical-demo"
 		      @open="handleOpen"
+			  
 		      @close="handleClose">
 			  
-		      <el-menu-item :index="menu.id" v-for="menu in menu_list" @click="goto(menu.page)">
+		      <el-menu-item :index="menu.id" v-for="menu in menu_list" @click="goto(menu.page)" >
 					  <i :class="menu.icon"></i> <span slot="title">{{menu.name}}</span>
 		      </el-menu-item>
 
@@ -24,7 +25,7 @@
 						id : '1',
 						icon : 'fa fa-home',
 						name : '工作台',
-						page : 'Home'
+						page : '/home'
 					},
 					{
 						id : '2',
@@ -112,9 +113,9 @@
 			{
 				
 			},
-			goto(route_name)
+			goto(route_path)
 			{
-				this.$router.push({name:route_name});
+				this.$router.push({path:route_path});
 			}
 			
 			

@@ -13,7 +13,7 @@
 		</el-aside>
 		
 		<el-container>
-		  <el-main>
+		  <el-main style="background-color: #F5F7FB;">
 			  
 			  <router-view></router-view>
 			  

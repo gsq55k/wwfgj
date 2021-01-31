@@ -5,19 +5,19 @@
 		<el-row>
 			<el-col :span="12">
 				<div class='titleBox'>
-					<span>五五房管家</span>
+					<span @click="getRouterBran()">五五房管家</span>
 				</div>
 
 				<div class="kouhao">
 
 					<div>
-						<span>终生免费使用房屋管理系统--全国房东都在用</span>
-						<el-breadcrumb separator-class="el-icon-arrow-right">
-						  <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-						  <el-breadcrumb-item>活动管理</el-breadcrumb-item>
-						  <el-breadcrumb-item>活动列表</el-breadcrumb-item>
-						  <el-breadcrumb-item>活动详情</el-breadcrumb-item>
+						
+						<el-breadcrumb  v-if="breadcrumb.length>0" separator-class="el-icon-arrow-right" >
+						  <el-breadcrumb-item :to="{ path: item.path }" v-for="item in breadcrumb" background-color="#ff0000">{{item.name}}</el-breadcrumb-item>
 						</el-breadcrumb>
+						
+						<span v-else>终生免费使用房屋管理系统--全国房东都在用</span>
+						
 					</div>
 
 
@@ -70,9 +70,9 @@
 								<i class="el-icon-arrow-down el-icon--right"></i>
 							  </span>
 							  <el-dropdown-menu slot="dropdown">
-							    <el-dropdown-item><div @click="goto('Register')">注册</div></el-dropdown-item>
-							    <el-dropdown-item><div @click="goto('Login')">登录</div></el-dropdown-item>
-								<el-dropdown-item><div @click="goto('Account')">个人信息</div></el-dropdown-item>
+							    <el-dropdown-item><div @click="goto('/register')">注册</div></el-dropdown-item>
+							    <el-dropdown-item><div @click="goto('/login')">登录</div></el-dropdown-item>
+								<el-dropdown-item><div @click="goto('/account')">个人信息</div></el-dropdown-item>
 							  </el-dropdown-menu>
 							  
 							</el-dropdown>
@@ -96,16 +96,28 @@
 	export default {
 		data: () => {
 			return {
-				activeIndex: "1"
+				activeIndex: "1",
+				breadcrumb : []
 			}
 		},
 		methods: {
 			handleSelect() {
 
 			},
-			goto(route_name)
+			goto(route_path)
 			{
-				this.$router.push({name:route_name});
+				this.$router.push({path:route_path});
+			},
+			getRouterBran()
+			{
+				
+				
+				console.log(this.breadcrumb);
+			}
+		},
+		watch:{
+			$route : function(val, oldVal) {
+				this.breadcrumb = this.$route.matched.filter(v=>v.name);
 			}
 		}
 	}
