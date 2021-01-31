@@ -17,6 +17,11 @@ const routes = [
 		  path: 'account',//个人中心
 		  name: '个人中心',
 		  component: () => import('@/views/Account')
+		},
+		{
+		  path: 'help',//个人中心
+		  name: '帮助中心',
+		  component: () => import('@/views/Help')
 		}
 	],
   },

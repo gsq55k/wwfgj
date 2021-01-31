@@ -1,5 +1,7 @@
 <template>
 	<div>
+
+		
 		<div style="display: flex;flex-wrap: wrap;">
 		
 			<el-card class="box-card home-menu" v-for="menu in menu_list" :style="{background: '#' + menu.color}">

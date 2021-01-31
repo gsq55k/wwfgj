@@ -9,6 +9,8 @@ Vue.use(Element, {size : 'small'});
 
 import 'font-awesome/css/font-awesome.min.css'
 
+import './assets/css/my.css'
+
 Vue.config.productionTip = false
 
 new Vue({

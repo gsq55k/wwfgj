@@ -24,9 +24,9 @@
 					</el-row>
 					
 					<div style="margin-top: 1.25rem;display: flex;justify-content: space-between;">
-						 <el-button type="warning" class="warning">智能照片</el-button>
-						 <el-button type="warning" class="warning">充值</el-button>
+						 <el-button type="warning" class="warning">智能招租</el-button>
 						 <el-button type="warning" class="warning">提现</el-button>
+						 <el-button type="warning" class="warning" @click="rechargeDialogVisible=true">充值</el-button>
 					</div>
 				    
 				  </div>
@@ -186,20 +186,55 @@
 					
 					</div>
 				</el-card>
-				
-				
+
 			</el-col>
 			
 		</el-row>
+
+		<el-dialog
+		  title="五五房管家充值"
+		  :visible.sync="rechargeDialogVisible"
+		  width="30%"
+		  center
+		  >
+		  
+		  <el-form label-position="top" label-width="80px" >
+			<el-form-item label="充值金额">
+				<div  style="display: flex;flex-direction: row;">
+					<el-input ></el-input> <span>元</span>
+				</div>
+
+			</el-form-item>
+			<el-form-item label="支付方式">
+			      <el-select placeholder="请选择支付方式" style="width: 100%;">
+			        <el-option label="微信" value="微信"></el-option>
+			        <el-option label="支付宝" value="支付宝"></el-option>
+			      </el-select>
+			</el-form-item>
+			
+		  </el-form>
+			  
+		  
+		  <span slot="footer" class="dialog-footer">
+		    <el-button class="warning" type="warning" @click="rechargeDialogVisible = false">前往支付</el-button>
+		    
+		  </span>
+		</el-dialog>
 		
 	</div>
 </template>
 
 <script>
+	export default {
+		data(){
+			return {
+				rechargeDialogVisible : false
+			}
+		}
+	}
 </script>
 
 <style scoped="scoped">
-	.warning{
-		background-color: #FF8400;
-	}
+
+
 </style>
