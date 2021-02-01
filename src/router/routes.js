@@ -35,6 +35,11 @@ const routes = [
 		  path: 'repair',//报修维护
 		  name: '报修维护',
 		  component: () => import('@/views/Repair')
+		},
+		{
+		  path: 'sharing',//合租模式
+		  name: '合租模式',
+		  component: () => import('@/views/Sharing')
 		}
 	],
   },

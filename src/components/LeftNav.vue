@@ -45,7 +45,8 @@
 					{
 						id : '5',
 						icon : 'fa fa-building',
-						name : '合租模式'
+						name : '合租模式',
+						page : '/sharing'
 					},
 					{
 						id : '6',
