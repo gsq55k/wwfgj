@@ -74,7 +74,8 @@
 					{
 						id : '10',
 						icon : 'fa fa-building',
-						name : '配置中心'
+						name : '配置中心',
+						page : '/peizhizhongxin'
 					},
 					{
 						id : '11',
