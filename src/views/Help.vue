@@ -23,34 +23,44 @@
 					<el-row style="height: 3rem;border-bottom: 1px solid #D3D3D3;">
 						<el-col :span="15" style="display: flex;">
 							
-							<div v-for="n in 4" style="line-height: 3rem;cursor: pointer;margin: 0px 0.625rem;">
-								
+							<div class="category_menu" :class="{active : activeName == '1'}" @click="activeName = 1">
 								<span>全部</span>
-								
 							</div>
 							
+							<div class="category_menu" :class="{active : activeName == '2'}" @click="activeName = 2">
+								<span>常见问题</span>
+							</div>
 							
+							<div class="category_menu" :class="{active : activeName == '3'}" @click="activeName = 3">
+								<span>操作手册</span>
+							</div>
+							
+							<div class="category_menu" :class="{active : activeName == '4'}" @click="activeName = 4">
+								<span>商家分享</span>
+							</div>
 							
 						</el-col>
-						<el-col :span="9">
+						<el-col :span="5" :offset="3" style="display: flex;align-items: center;height: 100%;">
 							
-							sdf
+							 <el-input placeholder="请输入文章标题">
+							    <el-button slot="append" icon="el-icon-search"></el-button>
+							  </el-input>
+							
 							
 						</el-col>
 						
 					</el-row>
 					
-					
-					
-					  <el-tabs v-model="activeName">
-						<el-tab-pane name="first">
-							<div slot="label" style="padding-left: 1.25rem;">全部</div>
+					<el-row>
+						
+						<el-col :span="24">
+							
 							<all></all>
-						</el-tab-pane>
-					    <el-tab-pane label="常见问题" name="second"><all></all></el-tab-pane>
-					    <el-tab-pane label="操作手册" name="third"><all></all></el-tab-pane>
-					    <el-tab-pane label="商家分享" name="fourth"><all></all></el-tab-pane>
-					  </el-tabs>
+							
+						</el-col>
+						
+					</el-row>
+					
 
 				</el-col>
 				
@@ -70,7 +80,7 @@
 		},
 		data(){
 			return {
-				activeName : "first",
+				activeName : 1,
 				menu_list : [
 					{
 						name : '热门搜索',
@@ -131,5 +141,26 @@
 	color: #FF8400;
 }
 
+.category_menu{
+	
+	line-height: 3rem;
+	cursor: pointer;
+	margin: 0px 0.625rem;
+	color: #999999;
+	box-sizing: border-box;
+	
+}
+.category_menu:hover{
+	
+	border-bottom: 2px solid #FF8400;
+	
+}
+
+.active{
+	
+	border-bottom: 2px solid #FF8400;
+	color: #000000;
+	
+}
 
 </style>
