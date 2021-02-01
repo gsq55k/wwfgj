@@ -69,7 +69,8 @@
 					{
 						id : '9',
 						icon : 'fa fa-building',
-						name : '设备管理'
+						name : '设备管理',
+						page : '/ruzhudegnji'
 					},
 					{
 						id : '10',

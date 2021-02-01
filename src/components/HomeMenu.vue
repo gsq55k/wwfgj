@@ -4,8 +4,8 @@
 		
 		<div style="display: flex;flex-wrap: wrap;">
 		
-			<el-card class="box-card home-menu" v-for="menu in menu_list" :style="{background: '#' + menu.color}">
-				<span>{{menu.name}}</span>
+			<el-card  class="box-card home-menu" v-for="menu in menu_list" :style="{background: '#' + menu.color}">
+				<span @click="goto(menu.page)">{{menu.name}}</span>
 			</el-card>
 		
 		</div>
@@ -22,6 +22,7 @@
 					{
 						name : "入驻登记",
 						color : 'EF8569',
+						page : '/ruzhudengji'
 					},
 					{
 						name : "添加房源",
@@ -62,6 +63,15 @@
 				]
 			}
 		},
+		methods:{
+			goto(page){
+				console.log(123);
+				
+				this.$router.replace({path: page})
+				
+				
+			}
+		}
 	}
 </script>
 

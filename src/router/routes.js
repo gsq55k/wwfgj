@@ -5,7 +5,7 @@
 const routes = [
   {//首页
     path: '/',
-    name: '首页',
+    name: '',
     component: () => import('@/views/Index'),
 	children:[
 		{
@@ -60,6 +60,11 @@ const routes = [
 		  path: 'peizhizhongxin',//集中公寓
 		  name: '配置中心',
 		  component: () => import('@/views/Peizhizhongxin')
+		},
+		{
+		  path: 'ruzhudengji',//集中公寓
+		  name: '入住登记',
+		  component: () => import('@/views/Ruzhudengji')
 		}
 	],
   },
