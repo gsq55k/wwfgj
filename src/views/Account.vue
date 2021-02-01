@@ -143,14 +143,67 @@
 		</el-row>
 		
 		<el-row style="background-color: #ffffff;margin-top: 0.625rem;height: 8.25rem;padding-top: 1.225rem;padding-left: 1.225rem;">
-			<el-col :span="6" style="display: flex;;height: 100%;">	
+			<el-col :span="6" style=";height: 100%;">	
+				<el-button @click="dialogVisible=true">修改密码</el-button>
 			</el-col>
 		</el-row>
+		
+		
+		
+		
+		
+		<el-dialog
+		  title="修改登录密码"
+		  :visible.sync="dialogVisible"
+		  width="400px"
+		  center
+		  >
+		  <div>
+			  
+			<el-form :inline="true" class="demo-form-inline" label-position="top">
+				
+			  <el-form-item label="手机号" :rules="[{required:true}]" style="width: 100%;">
+			    <el-input placeholder="请输入手机号"></el-input>
+			  </el-form-item>
+			  
+			  <el-form-item label="验证码" :rules="[{required:true}]" style="width: 100%;">
+			    <el-input placeholder=""></el-input>
+			  </el-form-item>
+				
+				
+				<el-form-item label="新密码" :rules="[{required:true}]" style="width: 100%;">
+				  <el-input placeholder="请输入您的新密码"></el-input>
+				</el-form-item>
+				
+				<el-form-item label="新密码" :rules="[{required:true}]" style="width: 100%;">
+				  <el-input placeholder="请再次输入您的新密码"></el-input>
+				</el-form-item>
+				
+			</el-form>
+			  
+			  
+			  
+			  
+			  
+		  </div>
+		  <span slot="footer" class="dialog-footer">
+		    <el-button type="warning" class="warning" @click="dialogVisible = false">确定修改</el-button>
+		  </span>
+		</el-dialog>
+		
+		
 		
 	</div>
 </template>
 
 <script>
+	export default{
+		data(){
+			return {
+				dialogVisible : false
+			}
+		}
+	}
 </script>
 
 <style>

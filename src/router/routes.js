@@ -40,6 +40,21 @@ const routes = [
 		  path: 'sharing',//合租模式
 		  name: '合租模式',
 		  component: () => import('@/views/Sharing')
+		},
+		{
+		  path: 'short',//短租模式
+		  name: '短租模式',
+		  component: () => import('@/views/Short')
+		},
+		{
+		  path: 'jizhonggongyu',//集中公寓
+		  name: '集中公寓',
+		  component: () => import('@/views/Jizhonggongyu')
+		},
+		{
+		  path: 'jizhongchaobiao',//集中公寓
+		  name: '集中抄表',
+		  component: () => import('@/views/Jizhongchaobiao')
 		}
 	],
   },

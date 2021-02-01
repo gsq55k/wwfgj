@@ -30,7 +30,8 @@
 					{
 						id : '2',
 						icon : 'fa fa-building',
-						name : '集中公寓'
+						name : '集中公寓',
+						page : '/jizhonggongyu'
 					},
 					{
 						id : '3',
@@ -40,7 +41,8 @@
 					{
 						id : '4',
 						icon : 'fa fa-building',
-						name : '短租模式'
+						name : '短租模式',
+						page : '/short'
 					},
 					{
 						id : '5',
@@ -61,7 +63,8 @@
 					{
 						id : '8',
 						icon : 'fa fa-building',
-						name : '集中抄表'
+						name : '集中抄表',
+						page : '/jizhongchaobiao'
 					},
 					{
 						id : '9',
