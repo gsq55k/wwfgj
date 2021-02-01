@@ -19,9 +19,17 @@ const routes = [
 		  component: () => import('@/views/Account')
 		},
 		{
-		  path: 'help',//个人中心
+		  path: 'help',//帮助中心
 		  name: '帮助中心',
-		  component: () => import('@/views/Help')
+		  component: () => import('@/views/Help'),
+		  children:[
+			  
+		  ]
+		},
+		{
+		  path: 'detail',//帮助中心详情
+		  name: '详情',
+		  component: () => import('@/views/HelpDetail')
 		}
 	],
   },

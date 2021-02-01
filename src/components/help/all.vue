@@ -2,7 +2,7 @@
 	<div style="text-align: left;padding-left: 0.625rem;display: flex;flex-direction: column;height: 100%;">
 		
 		<div>
-			<div  v-for="n in 5" style="margin-top: 0.625rem;">
+			<div  v-for="n in 5" style="margin-top: 0.625rem;" @click="goto()">
 				
 				<div>
 					
@@ -38,6 +38,19 @@
 </template>
 
 <script>
+	export default{
+		data(){
+			return {
+				
+			}
+		},
+		methods:{
+			goto(){
+				
+				this.$router.push({"path" : 'detail'})
+			}
+		}
+	}
 </script>
 
 <style>
