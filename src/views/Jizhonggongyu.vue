@@ -120,7 +120,157 @@
 				
 				<div style="display: flex;margin-top: 1.25rem;">
 					
-					<div @click="editvisible=true" v-for="n in 2" style="margin-right: 1.25rem;border: 0.0625rem solid #e1e5ea;height: 8.25rem;width: 8rem ;border-radius: 0.3125rem;background-color: #79849F;display: flex;flex-direction: column;">
+					
+					<el-popover
+					v-for="n in 2"
+					placement="right-start"
+					width="300"
+					trigger="hover">
+					
+					<div>
+						
+						<el-row style="border-bottom: 1px solid #A6A9AD;">
+							<el-col :span="12">
+								小窝青年公寓
+							</el-col>
+							
+							<el-col :span="12" style="text-align: right;color: red;">
+								¥1000
+							</el-col>
+						</el-row>
+						
+						
+						<div style="display: flex;margin-top: 0.625rem;">
+							
+							<div style="width: 5.25rem;flex: 1;">
+								房源信息：
+							</div>
+							
+						
+							
+							<div>
+								<a href="#">设备管理</a>
+							</div>
+							
+						</div>
+						
+						<div style="display: flex;">
+							
+							<div style="width: 5.25rem;">
+								房号：
+							</div>
+							
+							<div style="flex: 1;">
+								1003
+							</div>
+							
+							<div>
+								<a href="#">编辑房间</a>
+							</div>
+							
+						</div>
+						
+						<div style="display: flex;">
+							
+							<div style="width: 5.25rem;">
+								面积：
+							</div>
+							
+							<div style="flex: 1;">
+								20m²
+							</div>
+							
+							<div>
+								<a href="#">删除房间</a>
+							</div>
+							
+						</div>
+						
+						
+						
+						<div style="display: flex;margin-top: 0.625rem;">
+							
+							<div style="width: 5.25rem;flex: 1;">
+								房间状态：
+							</div>
+							
+						
+							
+							<div>
+								<a href="#">修改状态</a>
+							</div>
+							
+						</div>
+						
+						<div style="display: flex;">
+							
+							<div style="width: 5.25rem;">
+								出租状态：
+							</div>
+							
+							<div style="flex: 1;">
+								未出租
+							</div>
+							
+							
+							
+						</div>
+						
+						<div style="display: flex;">
+							
+							<div style="width: 5.25rem;">
+							智能招租：
+							</div>
+							
+							<div style="flex: 1;color: red;">
+								隐藏
+							</div>
+							
+							
+							
+						</div>
+						
+						<div style="font-size: 0.8rem;color: #c3c3c3;">
+							
+							<span>请在智能招租中打开招租功能，并充值保证账户余额充足</span>
+							
+						</div>
+						
+						<hr />
+						
+						<div style="display: flex;">
+							
+							<div style="width: 5.25rem;flex: 1;">
+							租约信息：
+							</div>
+							
+							<div style="">
+								<a href="#">添加预定</a>
+							</div>
+							
+							
+							
+						</div>
+						
+						<div style="display: flex;">
+							
+							<div style="width: 5.25rem;">
+							空置情况：
+							</div>
+							<div style="flex: 1;">已经空置30天</div>
+							
+							<div style="">
+								<a href="#">办理入住</a>
+							</div>
+							
+						</div>
+						
+						
+					</div>
+
+
+
+					<div slot="reference" @click="editvisible=true" style="margin-right: 1.25rem;border: 0.0625rem solid #e1e5ea;height: 8.25rem;width: 8rem ;border-radius: 0.3125rem;background-color: #79849F;display: flex;flex-direction: column;">
 						
 						<div style="flex: 1;">
 							<el-row style="font-size: 1.5rem;padding: 0.3125rem;color: #FFFFFF;">
@@ -158,6 +308,7 @@
 						
 					</div>
 					
+					</el-popover>
 					
 					
 				</div>
@@ -453,6 +604,9 @@
 		  </span>
 		</el-dialog>
 		
+		
+		
+		  
 	</el-row>
 </template>
 
