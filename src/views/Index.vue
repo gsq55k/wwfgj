@@ -16,9 +16,7 @@
 		
 		<el-container>
 		  <el-main style="background-color: #F5F7FB;">
-			  
 			  <router-view></router-view>
-			  
 		  </el-main>
 		  <el-footer></el-footer>
 		</el-container>

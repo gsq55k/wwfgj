@@ -30,6 +30,11 @@ const routes = [
 		  path: 'detail',//帮助中心详情
 		  name: '详情',
 		  component: () => import('@/views/HelpDetail')
+		},
+		{
+		  path: 'repair',//报修维护
+		  name: '报修维护',
+		  component: () => import('@/views/Repair')
 		}
 	],
   },

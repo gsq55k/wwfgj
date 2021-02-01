@@ -75,7 +75,8 @@
 					{
 						id : '11',
 						icon : 'fa fa-building',
-						name : '报修维护'
+						name : '报修维护',
+						page : 'repair'
 					},
 					{
 						id : '12',
