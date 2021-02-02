@@ -52,24 +52,29 @@ const routes = [
 		  component: () => import('@/views/Jizhonggongyu')
 		},
 		{
-		  path: 'jizhongchaobiao',//集中公寓
+		  path: 'jizhongchaobiao',//集中抄表
 		  name: '集中抄表',
 		  component: () => import('@/views/Jizhongchaobiao')
 		},
 		{
-		  path: 'peizhizhongxin',//集中公寓
+		  path: 'peizhizhongxin',//配置中心
 		  name: '配置中心',
 		  component: () => import('@/views/Peizhizhongxin')
 		},
 		{
-		  path: 'ruzhudengji',//集中公寓
+		  path: 'ruzhudengji',//入住登记
 		  name: '入住登记',
 		  component: () => import('@/views/Ruzhudengji')
 		},
 		{
-		  path: 'luntan',//集中公寓
+		  path: 'luntan',//论坛
 		  name: '论坛',
 		  component: () => import('@/views/Luntan')
+		},
+		{
+		  path: 'luntanDetail',
+		  name: '论坛详情',
+		  component: () => import('@/views/LuntanDetail')
 		}
 	],
   },
