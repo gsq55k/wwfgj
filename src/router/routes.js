@@ -65,6 +65,11 @@ const routes = [
 		  path: 'ruzhudengji',//集中公寓
 		  name: '入住登记',
 		  component: () => import('@/views/Ruzhudengji')
+		},
+		{
+		  path: 'luntan',//集中公寓
+		  name: '论坛',
+		  component: () => import('@/views/Luntan')
 		}
 	],
   },

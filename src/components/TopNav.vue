@@ -72,6 +72,8 @@
 							  <el-dropdown-menu slot="dropdown">
 							    <el-dropdown-item><div @click="goto('/register')">注册</div></el-dropdown-item>
 							    <el-dropdown-item><div @click="goto('/login')">登录</div></el-dropdown-item>
+								<el-dropdown-item><div @click="goto('/luntan')">论坛</div></el-dropdown-item>
+								
 								<el-dropdown-item><div @click="goto('/account')">个人信息</div></el-dropdown-item>
 								<el-dropdown-item><div @click="goto('/help')">帮助中心</div></el-dropdown-item>
 								<el-dropdown-item><div >放到桌面</div></el-dropdown-item>
