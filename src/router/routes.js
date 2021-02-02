@@ -75,6 +75,16 @@ const routes = [
 		  path: 'luntanDetail',
 		  name: '论坛详情',
 		  component: () => import('@/views/LuntanDetail')
+		},
+		{
+			path: 'shebeiguanli',
+			name: '设备管理',
+			component: () => import('@/views/Shebeiguanli')
+		},
+		{
+			path: 'shoukuanzhanghao',
+			name: '收款账号',
+			component: () => import('@/views/Shoukuanzhanghao')
 		}
 	],
   },

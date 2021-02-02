@@ -70,7 +70,7 @@
 						id : '9',
 						icon : 'fa fa-building',
 						name : '设备管理',
-						page : '/ruzhudegnji'
+						page : '/shebeiguanli'
 					},
 					{
 						id : '10',
@@ -92,7 +92,8 @@
 					{
 						id : '13',
 						icon : 'fa fa-building',
-						name : '收款账号'
+						name : '收款账号',
+						page : 'shoukuanzhanghao'
 					},
 					{
 						id : '14',
