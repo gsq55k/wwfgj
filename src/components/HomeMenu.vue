@@ -78,27 +78,127 @@
 		</div>
 		
 		<div style="margin-top: 1rem;">
-			
-			<div id="container" style="width: 100%;height: 22.5rem;"></div>
-			
+			<baidu-map class="map" :center="map.center" :zoom="map.zoom" @ready="handler">
+				<!--缩放-->
+				<bm-navigation anchor="BMAP_ANCHOR_TOP_LEFT"></bm-navigation>
+				<!--定位-->
+				<bm-geolocation anchor="BMAP_ANCHOR_BOTTOM_RIGHT" :showAddressBar="true" :autoLocation="true"></bm-geolocation>
+				<!--点-->
+				<bm-marker :position="map.center" :dragging="map.dragging" animation="BMAP_ANIMATION_DROP">
+				<!--提示信息-->
+				</bm-marker>
+			</baidu-map>
 		</div>
+		
+		<el-row style="margin-top: 1rem;">
+			
+			<el-col :span="12">
+				<label>小区名：</label>
+				<el-input></el-input>
+			</el-col>
+			
+		</el-row>
+		
+		<div style="line-height: 2rem;background-color: #ececec;margin-top: 1rem;">
+			<span style="font-size: 1.5rem;color: #FF8400;">|</span>
+			<span> 本栋管家</span>
+		</div>
+		
+		<el-row style="margin-top: 1rem;">
+			
+			<el-col :span="11">
+				<label>管家姓名：</label>
+				<el-input></el-input>
+			</el-col>
+			
+			<el-col :span="11" :offset="1">
+				<label>管家联系方式：</label>
+				<el-input></el-input>
+			</el-col>
+			
+		</el-row>
+		
+		<div style="line-height: 2rem;background-color: #ececec;margin-top: 1rem;">
+			<span style="font-size: 1.5rem;color: #FF8400;">|</span>
+			<span> 水电单价</span>
+		</div>
+		
+		<el-row style="margin-top: 1rem;">
+			
+			<el-col :span="11">
+				<label>冷水价：</label>
+				<el-input></el-input>
+			</el-col>
+			
+			<el-col :span="11" :offset="1">
+				<label>热水价：</label>
+				<el-input></el-input>
+			</el-col>
+			
+		</el-row>
+		
+		<el-row style="margin-top: 1rem;">
+			
+			<el-col :span="11">
+				<label>电 价：</label>
+				<el-input></el-input>
+			</el-col>
+			
+			<el-col :span="11" :offset="1">
+				<label>燃气价：</label>
+				<el-input></el-input>
+			</el-col>
+			
+		</el-row>
+		
+		<div style="line-height: 2rem;background-color: #ececec;margin-top: 1rem;">
+			<span style="font-size: 1.5rem;color: #FF8400;">|</span>
+			<span> 房源照片</span>
+		</div>
+		
+		
+		
+		
+		<div style="line-height: 2rem;background-color: #ececec;margin-top: 1rem;">
+			<span style="font-size: 1.5rem;color: #FF8400;">|</span>
+			<span> 公共配置</span>
+		</div>
+		
+		<div style="line-height: 2rem;background-color: #ececec;margin-top: 1rem;">
+			<span style="font-size: 1.5rem;color: #FF8400;">|</span>
+			<span> 房源描述</span>
+		</div>
+		
+		
+		<div style="margin-top: 1rem;">
+			<el-input type="textarea"></el-input>
+		</div>
+		
+		<div style="text-align: center;">
+			<el-button type='warning' class="warning">下一页</el-button>
+		</div>
+		
 		
 		</el-dialog>
 		
 		
 	</div>
 </template>
+
+
+
 <script>
-	import maps from 'qqmap'
+	
 	export default{
 		data(){
 			return {
 				tianjiafangyuandialog : true,
-				map: null,
-				  getAddress: null,
-				  getAddCode: null,
-				  addressKeyword: "",
-				  marker: ""
+				map:{
+					center: {lng: 104.0723660000, lat: 30.66230400000},
+					zoom: 15,
+					show: true,
+					dragging: true
+				},
 			}
 		},
 		methods:{
@@ -109,31 +209,16 @@
 				
 				
 			},
-			initMap() {
-			           maps.init("OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77", () => {
-			               console.log(maps);
-						   
-						   var center = new maps.LatLng(104.101940, 30.659840)
-						   var map = new maps.Map(document.getElementById('container'), {
-							   center : center,
-							   //缩放比例
-							   zoom : 10,
-							   //设置俯仰角
-							   pitch : 45,
-							   //设置旋转角度
-							   rotation : 180
-						   });
-						   
-						   console.log(map.getCenter());
-						   
-						   
-					   });
-					   
-					   
-					   
-					   
-					   
-			        }
+			handler ({BMap, map}) {
+				let me = this;
+				console.log(BMap, map)
+				// 鼠标缩放
+				map.enableScrollWheelZoom(true);
+				// 点击事件获取经纬度
+				map.addEventListener('click', function (e) {
+					console.log(e.point.lng, e.point.lat)
+				})
+			}
 		},
 		mounted() {
 			this.initMap();
@@ -148,5 +233,10 @@
 		color: #FFFFFF;
 		font-size: 1.0625rem;
 		line-height: 1.5625rem;
+	}
+	
+	.map {
+	  width: 100%;
+	  height: 200px;
 	}
 </style>
