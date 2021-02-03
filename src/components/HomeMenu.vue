@@ -192,7 +192,7 @@
 	export default{
 		data(){
 			return {
-				tianjiafangyuandialog : true,
+				tianjiafangyuandialog : false,
 				map:{
 					center: {lng: 104.0723660000, lat: 30.66230400000},
 					zoom: 15,
@@ -221,7 +221,7 @@
 			}
 		},
 		mounted() {
-			this.initMap();
+			
 		}
 	}
 </script>
